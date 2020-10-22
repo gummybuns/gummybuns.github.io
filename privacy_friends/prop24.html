@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+      *,
+      *:before,
+      *:after {
+        -webkit-box-sizing: border-box;
+           -moz-box-sizing: border-box;
+                box-sizing: border-box;
+      }
+
+      body {
+        width: 100%;
+        padding: 8px 10%;
+        margin: 0;
+        font-family: sans-serif;
+        max-width: 1800px;
+        margin: auto;
+      }
+
+      h1 {
+        font-size: 300%;
+        text-align: center;
+      }
+
+      strong.key {
+        display: block;
+        font-size: 300%;
+        margin-top: 8px;
+        margin-bottom: 8px;
+      }
+
+      section {
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+        margin-bottom: 24px;
+      }
+
+      section > p {
+        width: 40%;
+        margin: 16px;
+      }
+
+      .read-more {
+        cursor: pointer;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        padding: 16px;
+      }
+
+      .read-more:hover {
+        text-decoration: underline;
+      }
+
+      .value-container {
+        display: flex;
+        width: 100%;
+        color: white;
+        align-items: stretch;
+        min-height: 400px;
+      }
+
+      .value-container.alt {
+        flex-direction: column;
+      }
+
+      .value-container.alt .views {
+        flex-direction: row;
+      }
+
+      .value-container.alt .no {
+        flex-direction: row;
+        margin-top: 0;
+        margin-left: 8px;
+      }
+
+      .value-container.alt .yes {
+        flex-direction: row;
+        margin-bottom: 0;
+        margin-right: 4px;
+      }
+
+      .value-container p {
+        margin: 0;
+      }
+
+      .value {
+        background: #9655cf;
+        flex: 1 1 0px;
+        margin: 4px;
+      }
+
+      .views {
+        display: flex;
+        flex-direction: column;
+        margin: 4px;
+      }
+      
+      .view-title {
+        font-size: 250%;
+      }
+
+      .yes {
+        background: #56c476;
+        margin-bottom: 4px;
+      }
+
+      .no {
+        background: #f56c31;
+        margin-top: 4px;
+      }
+
+      .flex-extend {
+        flex: 1 1 0px;
+        padding: 0;
+        overflow: hidden;
+        transition: flex 1s ease-out;
+      }
+
+      .content {
+        padding: 8px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+        justify-content: space-around;
+      }
+
+      .value .content div:first-child {
+        padding-top: 60px;
+      }
+      .alt .value .content div:first-child {
+        padding-top: 30px;
+      }
+
+      .extra-content {
+        overflow: scroll;
+        transition: max-height 1s ease-out;
+        max-height: 800px;
+      }
+
+      .extra-content-hidden {
+        max-height: 0;
+        overflow: hidden;
+      }
+
+      .extra-content p {
+        margin: 8px;
+      }
+
+      .flex-hidden {
+        flex: 0 0 0px;
+        margin: 0;
+      }
+
+      @media(max-width: 1080px) {
+        section {
+          flex-direction: column;
+        }
+
+        section > p {
+          width: 100%;
+        }
+      }
+
+      @media(max-width: 768px) {
+        .value-container {
+          flex-direction: column;
+        }
+
+        .flex-extend {
+          flex: 1;
+        }
+
+        .value {
+          margin-right: 0;
+          margin-bottom: 8px;
+        }
+
+        .yes, .no, .value {
+          min-height: 200px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Lorem Ipsum</h1>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam non ex sed lectus feugiat tristique. Sed vel ultrices ex. Praesent cursus urna at nisi scelerisque, in sagittis metus molestie. Nam non molestie risus. Sed dignissim dapibus elementum. Integer molestie bibendum quam. Duis ultricies sapien nec purus maximus feugiat. Etiam at pulvinar tellus, vitae porta dui. Praesent maximus iaculis odio, sed accumsan diam varius a. Ut ornare cursus tortor eu lobortis. Quisque pharetra leo eu nisi rutrum, et consectetur nunc semper.
+    </p>
+    <p>
+      Quisque posuere sollicitudin nisl eget tincidunt. Quisque tortor augue, sagittis vel vehicula sed, auctor pellentesque nunc. Aenean elementum eros et massa consequat lacinia. Praesent aliquam tellus eu molestie congue. Nam ac enim sed lectus consequat lobortis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque volutpat mi tortor, eu sollicitudin nisl auctor quis. Praesent risus nisi, luctus ut eros a, varius ultricies ipsum.
+    </p>
+
+    <section>
+      <div class="value-container">
+        <div class="views flex-extend">
+          <div class="yes flex-extend">
+            <div class="content">
+              <div>
+                <p class="view-title">Yes on Prop 24</p>
+                <p>
+                  All companies will respect global opt outbut companies that want to charge consumers that opt out data collection will notify the consumer via pop-up notice on their site.
+                </p>
+              </div>
+              <div class="extra-content extra-content-hidden">
+                <p>
+                    Nullam justo purus, dapibus ultrices lectus nec, fringilla pretium orci. Etiam tincidunt dui et purus venenatis vestibulum. Phasellus quis lorem ultricies, venenatis est at, mattis neque. Morbi eleifend, lorem ac varius eleifend, augue ipsum lacinia justo, at auctor sapien leo eget eros. Nulla vitae eros hendrerit, viverra urna nec, aliquet sem. Nulla a magna purus. Pellentesque turpis magna, venenatis id tristique sit amet, tristique at dui. Integer scelerisque dui accumsan erat fermentum hendrerit. Nullam odio nisi, dignissim eget est a, egestas aliquet magna. Cras sem nisl, molestie ut interdum eu, aliquam eget dolor. Proin volutpat elit sed erat iaculis imperdiet. In ut ultricies risus. Aenean ac eros vitae est egestas posuere eget scelerisque lacus. Sed consectetur eu mi a commodo.
+                </p>
+                <p>
+                    Nullam justo purus, dapibus ultrices lectus nec, fringilla pretium orci. Etiam tincidunt dui et purus venenatis vestibulum. Phasellus quis lorem ultricies, venenatis est at, mattis neque. Morbi eleifend, lorem ac varius eleifend, augue ipsum lacinia justo, at auctor sapien leo eget eros. Nulla vitae eros hendrerit, viverra urna nec, aliquet sem. Nulla a magna purus. Pellentesque turpis magna, venenatis id tristique sit amet, tristique at dui. Integer scelerisque dui accumsan erat fermentum hendrerit. Nullam odio nisi, dignissim eget est a, egestas aliquet magna. Cras sem nisl, molestie ut interdum eu, aliquam eget dolor. Proin volutpat elit sed erat iaculis imperdiet. In ut ultricies risus. Aenean ac eros vitae est egestas posuere eget scelerisque lacus. Sed consectetur eu mi a commodo.
+                </p>
+                <p>
+                    Nulla eget leo ut mauris faucibus euismod vitae a magna. Nulla ullamcorper, ipsum sed tempus accumsan, urna justo iaculis erat, malesuada condimentum mauris nisl vel mi. Pellentesque sodales malesuada augue, et bibendum nunc iaculis id. In in justo orci. Suspendisse potenti. Aliquam erat volutpat. Mauris dictum sollicitudin ultricies. In rutrum orci a odio ultrices tristique. Nullam fringilla dolor in massa fringilla convallis.
+                </p>
+              </div>
+              <a class="read-more">Read More</a>
+            </div>
+          </div>
+          <div class="no flex-extend">
+            <div class="content">
+              <div>
+                <p class="view-title">No on Prop 24</p>
+                <p>
+                  All companies will respect global opt out without exception.
+                </p>
+              </div>
+              <a class="read-more">Read More</a>
+            </div>
+          </div>
+        </div>
+        <div class="value flex-extend">
+          <div class="content">
+            <div>
+              <p>I have questions about the<strong class="key">Enforcement</strong>of Prop 24 and how it effectively protects me</p>
+            </div>
+            <div class="extra-content extra-content-hidden">
+              <p>
+                <strong>Pay for Privacy</strong>is the idea that companies can charge you a fee in exchange for the revenue
+                they lose out on for collecting and sharing your data. The concept is to allow for companies to continue receiving revenue for
+                and to allow those who are privacy conscious a way to still receive a full suite or services.
+              </p>
+              <ul>
+                <li>It is mainly a way to save news websites</li>
+                <li>It also does some other things like other content here</li>
+                <li>Those who oppose thing that it is bad for many reasons</li>
+              </ul>
+            </div>
+            <a class="read-more">What is Global Opt Out?</a>
+          </div>
+        </div>
+      </div>
+      <p>
+        
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam non ex sed lectus feugiat tristique. Sed vel ultrices ex. Praesent cursus urna at nisi scelerisque, in sagittis metus molestie. Nam non molestie risus. Sed dignissim dapibus elementum. Integer molestie bibendum quam. Duis ultricies sapien nec purus maximus feugiat. Etiam at pulvinar tellus, vitae porta dui. Praesent maximus iaculis odio, sed accumsan diam varius a. Ut ornare cursus tortor eu lobortis. Quisque pharetra leo eu nisi rutrum, et consectetur nunc semper.
+      </p>
+    </section>
+
+    <section>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam non ex sed lectus feugiat tristique. Sed vel ultrices ex. Praesent cursus urna at nisi scelerisque, in sagittis metus molestie. Nam non molestie risus. Sed dignissim dapibus elementum. Integer molestie bibendum quam. Duis ultricies sapien nec purus maximus feugiat. Etiam at pulvinar tellus, vitae porta dui. Praesent maximus iaculis odio, sed accumsan diam varius a. Ut ornare cursus tortor eu lobortis. Quisque pharetra leo eu nisi rutrum, et consectetur nunc semper.
+      </p>
+      <div class="value-container">
+        <div class="value flex-extend">
+          <div class="content">
+            <div>
+              <p>I care about the creation and protection of <strong class="key">Global Opt Out</strong></p>
+            </div>
+            <div class="extra-content extra-content-hidden">
+              <p>
+                <strong>Pay for Privacy</strong>is the idea that companies can charge you a fee in exchange for the revenue
+                they lose out on for collecting and sharing your data. The concept is to allow for companies to continue receiving revenue for
+                and to allow those who are privacy conscious a way to still receive a full suite or services.
+              </p>
+              <ul>
+                <li>It is mainly a way to save news websites</li>
+                <li>It also does some other things like other content here</li>
+                <li>Those who oppose thing that it is bad for many reasons</li>
+              </ul>
+            </div>
+            <a class="read-more">What is Global Opt Out?</a>
+          </div>
+        </div>
+        <div class="views flex-extend">
+          <div class="yes flex-extend">
+            <div class="content">
+              <div>
+                <p class="view-title">Yes on Prop 24</p>
+                <p>
+                  All companies will respect global opt outbut companies that want to charge consumers that opt out data collection will notify the consumer via pop-up notice on their site.
+                </p>
+              </div>
+              <div class="extra-content extra-content-hidden">
+                <p>
+                    Nullam justo purus, dapibus ultrices lectus nec, fringilla pretium orci. Etiam tincidunt dui et purus venenatis vestibulum. Phasellus quis lorem ultricies, venenatis est at, mattis neque. Morbi eleifend, lorem ac varius eleifend, augue ipsum lacinia justo, at auctor sapien leo eget eros. Nulla vitae eros hendrerit, viverra urna nec, aliquet sem. Nulla a magna purus. Pellentesque turpis magna, venenatis id tristique sit amet, tristique at dui. Integer scelerisque dui accumsan erat fermentum hendrerit. Nullam odio nisi, dignissim eget est a, egestas aliquet magna. Cras sem nisl, molestie ut interdum eu, aliquam eget dolor. Proin volutpat elit sed erat iaculis imperdiet. In ut ultricies risus. Aenean ac eros vitae est egestas posuere eget scelerisque lacus. Sed consectetur eu mi a commodo.
+                </p>
+                <p>
+                    Nullam justo purus, dapibus ultrices lectus nec, fringilla pretium orci. Etiam tincidunt dui et purus venenatis vestibulum. Phasellus quis lorem ultricies, venenatis est at, mattis neque. Morbi eleifend, lorem ac varius eleifend, augue ipsum lacinia justo, at auctor sapien leo eget eros. Nulla vitae eros hendrerit, viverra urna nec, aliquet sem. Nulla a magna purus. Pellentesque turpis magna, venenatis id tristique sit amet, tristique at dui. Integer scelerisque dui accumsan erat fermentum hendrerit. Nullam odio nisi, dignissim eget est a, egestas aliquet magna. Cras sem nisl, molestie ut interdum eu, aliquam eget dolor. Proin volutpat elit sed erat iaculis imperdiet. In ut ultricies risus. Aenean ac eros vitae est egestas posuere eget scelerisque lacus. Sed consectetur eu mi a commodo.
+                </p>
+                <p>
+                    Nulla eget leo ut mauris faucibus euismod vitae a magna. Nulla ullamcorper, ipsum sed tempus accumsan, urna justo iaculis erat, malesuada condimentum mauris nisl vel mi. Pellentesque sodales malesuada augue, et bibendum nunc iaculis id. In in justo orci. Suspendisse potenti. Aliquam erat volutpat. Mauris dictum sollicitudin ultricies. In rutrum orci a odio ultrices tristique. Nullam fringilla dolor in massa fringilla convallis.
+                </p>
+              </div>
+              <a class="read-more">Read More</a>
+            </div>
+          </div>
+          <div class="no flex-extend">
+            <div class="content">
+              <div>
+                <p class="view-title">No on Prop 24</p>
+                <p>
+                  All companies will respect global opt out without exception.
+                </p>
+              </div>
+              <a class="read-more">Read More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div style="display: none;" class="value-container alt">
+      <div class="value flex-extend">
+        <div class="content">
+          <div>
+            <p>I feel strongly about <strong class="key">Pay for Privacy</strong></p>
+          </div>
+          <div class="extra-content extra-content-hidden">
+            <p>
+              <strong>Pay for Privacy</strong>is the idea that companies can charge you a fee in exchange for the revenue
+              they lose out on for collecting and sharing your data. The concept is to allow for companies to continue receiving revenue for
+              and to allow those who are privacy conscious a way to still receive a full suite or services.
+            </p>
+            <ul>
+              <li>It is mainly a way to save news websites</li>
+              <li>It also does some other things like other content here</li>
+              <li>Those who oppose thing that it is bad for many reasons</li>
+            </ul>
+          </div>
+          <a class="read-more">What is Pay for Privacy?</a>
+        </div>
+      </div>
+      <div class="views flex-extend">
+        <div class="yes flex-extend">
+          <div class="content">
+            <div>
+              <p class="view-title">Yes on Prop 24</p>
+              <p>
+                All companies will respect global opt outbut companies that want to charge consumers that opt out data collection will notify the consumer via pop-up notice on their site.
+              </p>
+            </div>
+            <div class="extra-content extra-content-hidden">
+              <p>
+                  Nullam justo purus, dapibus ultrices lectus nec, fringilla pretium orci. Etiam tincidunt dui et purus venenatis vestibulum. Phasellus quis lorem ultricies, venenatis est at, mattis neque. Morbi eleifend, lorem ac varius eleifend, augue ipsum lacinia justo, at auctor sapien leo eget eros. Nulla vitae eros hendrerit, viverra urna nec, aliquet sem. Nulla a magna purus. Pellentesque turpis magna, venenatis id tristique sit amet, tristique at dui. Integer scelerisque dui accumsan erat fermentum hendrerit. Nullam odio nisi, dignissim eget est a, egestas aliquet magna. Cras sem nisl, molestie ut interdum eu, aliquam eget dolor. Proin volutpat elit sed erat iaculis imperdiet. In ut ultricies risus. Aenean ac eros vitae est egestas posuere eget scelerisque lacus. Sed consectetur eu mi a commodo.
+              </p>
+              <p>
+                  Nullam justo purus, dapibus ultrices lectus nec, fringilla pretium orci. Etiam tincidunt dui et purus venenatis vestibulum. Phasellus quis lorem ultricies, venenatis est at, mattis neque. Morbi eleifend, lorem ac varius eleifend, augue ipsum lacinia justo, at auctor sapien leo eget eros. Nulla vitae eros hendrerit, viverra urna nec, aliquet sem. Nulla a magna purus. Pellentesque turpis magna, venenatis id tristique sit amet, tristique at dui. Integer scelerisque dui accumsan erat fermentum hendrerit. Nullam odio nisi, dignissim eget est a, egestas aliquet magna. Cras sem nisl, molestie ut interdum eu, aliquam eget dolor. Proin volutpat elit sed erat iaculis imperdiet. In ut ultricies risus. Aenean ac eros vitae est egestas posuere eget scelerisque lacus. Sed consectetur eu mi a commodo.
+              </p>
+              <p>
+                  Nulla eget leo ut mauris faucibus euismod vitae a magna. Nulla ullamcorper, ipsum sed tempus accumsan, urna justo iaculis erat, malesuada condimentum mauris nisl vel mi. Pellentesque sodales malesuada augue, et bibendum nunc iaculis id. In in justo orci. Suspendisse potenti. Aliquam erat volutpat. Mauris dictum sollicitudin ultricies. In rutrum orci a odio ultrices tristique. Nullam fringilla dolor in massa fringilla convallis.
+              </p>
+            </div>
+            <a class="read-more">Read More</a>
+          </div>
+        </div>
+        <div class="no flex-extend">
+          <div class="content">
+            <div>
+              <p class="view-title">No on Prop 24</p>
+              <p>
+                All companies will respect global opt out without exception.
+              </p>
+            </div>
+            <a class="read-more">Read More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  <script>
+    function toggleClass(el, className) {
+      if (el.classList.contains(className)) {
+        el.classList.remove(className);
+      } else {
+        el.classList.add(className);
+      }
+    }
+
+    function handleValueClick(el, others) {
+      var extraContent = el.getElementsByClassName('extra-content')[0];
+      var isExpanded = false;
+      var readMoreLink = el.getElementsByClassName('read-more')[0];
+      var readMoreText = readMoreLink.innerHTML;
+
+      return function() {
+        if (!isExpanded) {
+          if (extraContent) {
+            toggleClass(extraContent, 'extra-content-hidden');
+          }
+
+          for (var i = 0; i < others.length; i++) {
+            toggleClass(others[i], 'flex-hidden');
+          }
+          readMoreLink.innerHTML = 'Back';
+        } else {
+          for (var i = others.length - 1; i >= 0; i--) {
+            toggleClass(others[i], 'flex-hidden');
+          }
+          if (extraContent) {
+            toggleClass(extraContent, 'extra-content-hidden');
+          }
+          readMoreLink.innerHTML = readMoreText;
+        }
+        isExpanded = !isExpanded;
+      };
+    }
+
+    function handleViewClick(el, others) {
+      var isExpanded = false;
+      var extraContent = el.getElementsByClassName('extra-content')[0];
+      var readMoreLink = el.getElementsByClassName('read-more')[0];
+      var readMoreText = readMoreLink.innerHTML;
+
+      return function() {
+        readMoreLink.innerHTML = !isExpanded ? 'Back' : readMoreText;
+        if (extraContent) {
+          toggleClass(extraContent, 'extra-content-hidden');
+        }
+
+        for (var i = 0; i < others.length; i++) {
+          toggleClass(others[i], 'flex-hidden');
+        }
+
+        isExpanded = !isExpanded;
+      };
+    }
+
+    var valueContainers = document.getElementsByClassName('value-container');
+    for (var i = 0; i <valueContainers.length; i++) {
+      var container = valueContainers[i];
+      var value = container.getElementsByClassName('value')[0];
+      var yes = container.getElementsByClassName('yes')[0];
+      var no = container.getElementsByClassName('no')[0];
+      var views = container.getElementsByClassName('views')[0];
+
+      value.addEventListener('click', handleValueClick(value, [views]));
+      yes.addEventListener('click', handleViewClick(yes, [value, no]));
+      no.addEventListener('click', handleViewClick(no, [yes, value]));
+    }
+  </script>
+  </body>
+</html>
