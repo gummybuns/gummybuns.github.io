@@ -3,6 +3,7 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
 
     <style>
       *,
@@ -20,7 +21,7 @@
         font-family: sans-serif;
         max-width: 1800px;
         margin: auto;
-        font-family: Oswald, sans-serif;
+        font-family: 'Roboto', sans-serif;
         font-weight: 300;
         text-align: justify;
       }
@@ -28,6 +29,7 @@
       h1 {
         font-size: 300%;
         text-align: center;
+        font-family: 'Oswald', sans-serif;
       }
 
       strong.key {
@@ -35,6 +37,9 @@
         font-size: 300%;
         margin-top: 8px;
         margin-bottom: 8px;
+        font-family: 'Oswald', sans-serif;
+        text-transform: uppercase;
+        text-align: left;
       }
 
       section {
@@ -55,6 +60,8 @@
         width: 100%;
         justify-content: center;
         padding: 16px;
+        text-transform: uppercase;
+        font-size: 80%;
       }
 
       .read-more:hover {
@@ -110,6 +117,8 @@
         font-size: 250%;
         text-align: center;
         font-weight: 600;
+        font-family: 'Oswald', sans-serif;
+        text-transform: uppercase;
       }
 
       .yes {
@@ -172,6 +181,10 @@
           flex-direction: column;
         }
 
+        .mobile-reverse {
+          flex-direction: column-reverse;
+        }
+
         section > p {
           width: 100%;
           margin-left: 0;
@@ -181,11 +194,11 @@
 
       @media(max-width: 768px) {
         .value-container {
-          flex-direction: column;
+          flex-direction: column-reverse;
         }
 
-        .mobile-reverse {
-          flex-direction: column-reverse;
+        .mobile-reverse .value-container {
+          flex-direction: column;
         }
 
         .flex-extend {
